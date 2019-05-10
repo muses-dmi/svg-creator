@@ -1,0 +1,43 @@
+--  MPC style SVG Interface
+-- Copyright: Benedict R. Gaster (2019)
+
+mpc = 
+    (mconcat $ map (\y -> pads' (10 + y*29) 25 4 2 29) [0..3])
+    <>
+    stop ! #x 167 ! #y 20 ! #size 25
+    <>
+    play ! #v1 (162,32) ! #v2 (142,20) ! #v3 (142,45)
+    <>
+    record ! #x 209 ! #y 32 ! #r 12
+    <>
+    (mconcat $ map slider' [0..3])
+    <>
+    endless ! #cx 132 ! #cy 74 ! #or 14 ! #ir 7 ! #address "/mixer/pan"
+    <>
+    ciPad ! #x 132 ! #y 74 ! #r 5 ! #address "/mixer/mute" 
+    <>
+    endless ! #cx (132+30) ! #cy 74 ! #or 14 ! #ir 7 ! #address "/mixer/pan"
+    <>
+    ciPad ! #x (132+30) ! #y 74 ! #r 5 ! #address "/mixer/mute" 
+    <>
+    endless ! #cx (132+30*2) ! #cy 74 ! #or 14 ! #ir 7 ! #address "/mixer/pan"
+    <>
+    ciPad ! #x (132+30*2) ! #y 74 ! #r 5 ! #address "/mixer/mute" 
+    <>
+    endless ! #cx (132+30*3) ! #cy 74 ! #or 14 ! #ir 7 ! #address "/mixer/pan"
+    <>
+    ciPad ! #x (132+30*3) ! #y 74 ! #r 5 ! #address "/mixer/mute" 
+  
+-- generate a slider for a specified channel
+slider' = \chan -> 
+    vertSlider ! #x (125 + chan * 30) ! #y 90
+                ! #width 15 ! #height 45 ! #min 0 ! #max 127 ! #address "/mixer/volume" 
+                # iargs [chan]
+  
+-- generate a pad at given y position and size, returns a function that expects the number of channels to 
+-- create and an x position and space between each channel
+pads' y size = \n x spacer -> 
+      let p = \chan -> pad ! #x (x + chan*spacer) ! #y y ! #size size ! #address "/seq/chan" # iargs [chan]
+      in mconcat $ foldr (\a b -> p a : b) [] [0..n-1] 
+
+interface = mpc

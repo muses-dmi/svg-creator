@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="140mm" viewBox="0 0 240 140" width="240mm" version="1.11.1" interface_device="sensel">
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="0 " x="2" y="10"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="1 " x="31" y="10"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="2 " x="60" y="10"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="3 " x="89" y="10"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="0 " x="2" y="39"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="1 " x="31" y="39"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="2 " x="60" y="39"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="3 " x="89" y="39"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="0 " x="2" y="68"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="1 " x="31" y="68"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="2 " x="60" y="68"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="3 " x="89" y="68"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="0 " x="2" y="97"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="1 " x="31" y="97"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="2 " x="60" y="97"/>
+  <rect interface_osc_address="/seq/chan" height="25" interface_type="pad" width="25" interface_osc_args="3 " x="89" y="97"/>
+  <rect interface_osc_address="/play" height="25" interface_type="pad" width="25" x="167" y="20"/>
+  <polygon interface_osc_address="/play" points="162 32 142 20 142 45 162 32" interface_type="pad"/>
+  <circle interface_osc_address="/record" interface_type="pad" cy="32" r="12" cx="209"/>
+  <rect interface_osc_address="/mixer/volume" max="127" height="45" interface_type="pad" width="15" min="0" interface_osc_args="0 " x="125" y="90"/>
+  <rect interface_osc_address="/mixer/volume" max="127" height="45" interface_type="pad" width="15" min="0" interface_osc_args="1 " x="155" y="90"/>
+  <rect interface_osc_address="/mixer/volume" max="127" height="45" interface_type="pad" width="15" min="0" interface_osc_args="2 " x="185" y="90"/>
+  <rect interface_osc_address="/mixer/volume" max="127" height="45" interface_type="pad" width="15" min="0" interface_osc_args="3 " x="215" y="90"/>
+  <path interface_osc_address="/mixer/pan" interface_type="endless" d="M132 60 A14 14 0 1 0 132 88 A14 14 0 1 0 132 60 Z M132 67 A7 7 0 1 1 132 81 A7 7 0 1 1 132 67 Z"/>
+  <circle interface_osc_address="/mixer/mute" interface_type="pad" cy="74" r="5" cx="132"/>
+  <path interface_osc_address="/mixer/pan" interface_type="endless" d="M162 60 A14 14 0 1 0 162 88 A14 14 0 1 0 162 60 Z M162 67 A7 7 0 1 1 162 81 A7 7 0 1 1 162 67 Z"/>
+  <circle interface_osc_address="/mixer/mute" interface_type="pad" cy="74" r="5" cx="162"/>
+  <path interface_osc_address="/mixer/pan" interface_type="endless" d="M192 60 A14 14 0 1 0 192 88 A14 14 0 1 0 192 60 Z M192 67 A7 7 0 1 1 192 81 A7 7 0 1 1 192 67 Z"/>
+  <circle interface_osc_address="/mixer/mute" interface_type="pad" cy="74" r="5" cx="192"/>
+  <path interface_osc_address="/mixer/pan" interface_type="endless" d="M222 60 A14 14 0 1 0 222 88 A14 14 0 1 0 222 60 Z M222 67 A7 7 0 1 1 222 81 A7 7 0 1 1 222 67 Z"/>
+  <circle interface_osc_address="/mixer/mute" interface_type="pad" cy="74" r="5" cx="222"/>
+</svg>
