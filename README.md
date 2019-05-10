@@ -1,10 +1,6 @@
 # SVG Interface Creator Tool
 
 
-# Credits
-
-The underlying SVG DSL was originally built upon [svg-builder](https://github.com/diagrams/svg-builder). Small modifications have been made to support some interface specific attributes in the resulting output SVGs, otherwise it remains the same.
-
 # License
 
 Some of the code for the underlying SVG DSL comes from [svg-builder](https://github.com/diagrams/svg-builder), and even in the case of changes to those original files its license applies.
