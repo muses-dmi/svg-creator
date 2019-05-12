@@ -1,7 +1,7 @@
 - pattern: examples/(.*)\.mi
   exclude: _test
   commands:
-  - cat pre.hs > app/Demo.hs
+  - cat utils/pre.hs > app/Demo.hs
   - printf '"examples/' >> app/Demo.hs
   - printf \1 >> app/Demo.hs
   - echo '.svg"' >> app/Demo.hs

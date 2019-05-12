@@ -22,17 +22,9 @@ gen = do
   writeFile name $ show $ interfaceNoBorder lightblock interface 
  -- print $ interfaceNoBorder lightblock interface
 
-name = "examples/lightpad.svg"
-lightpad = 
-    mconcat (map p [(0,100), (4, 101), (8, 102), (12, 103)])
-    <>
-    mconcat (map s [(0,104), (4, 105), (8, 106), (12, 107)])
-    where
-      p = \(x, cc) -> pad ! #x x ! #y 0 ! #size 3 ! #address "/midicc" # iargs [cc]
-                                                                       # fill "rgb(217,137,188)"
-      s = \(x, cc) -> 
-        vertSlider ! #x x ! #y 4
-                   ! #width 3 ! #height 11 ! #min 0 ! #max 127 ! #address "/midicc" # fill "rgb(96,95,164)"
-                                                                                    # iargs [cc]
-  
+name = "examples/example1.svg"
+lightpad = pad ! #x 0 ! #y 0 ! #size 3 
+               ! #address "/midicc" # iargs [100]
+               # fill "rgb(217,137,188)"
+
 interface = lightpad
