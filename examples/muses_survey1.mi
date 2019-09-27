@@ -1,0 +1,5 @@
+material = 
+    pad ! #x 30 ! #y 30 ! #size 30 ! #address "/material" 
+          # pressure True # withMove # withCoords # withEnd # iargs [1]
+
+interface = material

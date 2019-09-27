@@ -1,0 +1,42 @@
+interface = mempty
+    <>
+    stop ! #x 167 ! #y 20 ! #size 25
+    <>
+    record ! #x 209 ! #y 32 ! #r 12
+    <>
+    play ! #v1 (162 ,32) ! #v2 (142 ,20) ! #v3 (142 ,45)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -- <>
+    -- pads
+    
+
+pads = (mconcat $ map (\y -> pads' (10 + y*29) 25 4 2 29) [0..3])
+
+-- generate a pad at given y position and size, returns a function that expects the number of channels to 
+-- create and an x position and space between each channel
+pads' y size = \n x spacer -> 
+    let p = \chan -> pad ! #x (x + chan*spacer) ! #y y ! #size size 
+                         ! #address (pack ("/seq/chan" ++ show (chan + (quot (y-10) 29)*4))) 
+    in mconcat $ foldr (\a b -> p a : b) [] [0..n-1] 

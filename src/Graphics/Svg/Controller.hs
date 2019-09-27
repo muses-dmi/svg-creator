@@ -93,6 +93,18 @@ imin = flip with . (:[]) . (->>Min_) . pack . show
 imax :: Int -> Element -> Element
 imax = flip with . (:[]) . (->>Max_) . pack . show
 
+pressure :: Bool -> Element -> Element
+pressure = flip with . (:[]) . (->>Pressure_) . pack . show
+
+withMove :: Element -> Element
+withMove = (flip with . (:[]) . (->>WithMove_) . pack) (show True)
+
+withEnd :: Element -> Element
+withEnd = (flip with . (:[]) . (->>WithEnd_) . pack) (show True)
+
+withCoords :: Element -> Element
+withCoords = (flip with . (:[]) . (->>WithCoords_) . pack) (show True)
+
 class IArgsAllType t where
     iargsAll' :: [Int] -> t
 
@@ -250,7 +262,7 @@ radians = \degrees -> degrees * (pi/180)
 -- a small set of controllers are predefined with global OSC addresses
 
 stop :: "x" :! Int -> "y" :! Int -> "size" :! Int -> Element
-stop (Arg x) (Arg y) (Arg size) = rectPad ! #x x ! #y y ! #width size ! #height size ! #address "/play"
+stop (Arg x) (Arg y) (Arg size) = rectPad ! #x x ! #y y ! #width size ! #height size ! #address "/stop"
 
 record :: "x" :! Int -> "y" :! Int -> "r" :! Int -> Element
 record (Arg x) (Arg y) (Arg r) = ciPad ! #x x ! #y y ! #r r ! #address "/record"

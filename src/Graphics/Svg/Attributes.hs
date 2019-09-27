@@ -313,6 +313,11 @@ data AttrTag
   | IAddress_
   | IArgs_
   | Device_
+  | Pressure_
+  | WithMove_
+  | Coords_
+  | WithCoords_
+  | WithEnd_
 
 -- Link the tags to their svg strings.
 tag2text :: AttrTag -> Text
@@ -584,3 +589,7 @@ tag2text IType_ = "interface_type"
 tag2text IAddress_ = "interface_osc_address"
 tag2text IArgs_ = "interface_osc_args"
 tag2text Device_ = "interface_device"
+tag2text Pressure_ = "pressure"
+tag2text WithMove_ = "with_move"
+tag2text WithEnd_ = "with_end"
+tag2text WithCoords_ = "with_coords"
