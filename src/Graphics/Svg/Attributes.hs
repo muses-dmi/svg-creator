@@ -318,6 +318,8 @@ data AttrTag
   | Coords_
   | WithCoords_
   | WithEnd_
+  | IOn_
+  | IOff_
 
 -- Link the tags to their svg strings.
 tag2text :: AttrTag -> Text
@@ -593,3 +595,5 @@ tag2text Pressure_ = "pressure"
 tag2text WithMove_ = "with_move"
 tag2text WithEnd_ = "with_end"
 tag2text WithCoords_ = "with_coords"
+tag2text IOn_ = "on"
+tag2text IOff_ = "off"

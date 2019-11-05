@@ -19,7 +19,8 @@ default (Int, Float)
 
 gen :: IO ()
 gen = do
-  writeFile name $ show $ interfaceNoBorder lightblock interface 
+  writeFile name $ show $ interfaceWithBorder sensel interface 
+ -- writeFile name $ show $ interfaceWithBorder landscapeA4 interface 
  -- print $ interfaceNoBorder lightblock interface
 
 name = 

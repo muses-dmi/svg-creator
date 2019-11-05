@@ -2,7 +2,7 @@ interface = mempty
     <>
     stop ! #x 167 ! #y 20 ! #size 25
     <>
-    record ! #x 209 ! #y 32 ! #r 12
+    record ! #x 209 ! #y 32 ! #r 12   
     <>
     play ! #v1 (162 ,32) ! #v2 (142 ,20) ! #v3 (142 ,45)
 

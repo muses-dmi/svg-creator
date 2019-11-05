@@ -37,7 +37,7 @@ slider' = \chan ->
 -- generate a pad at given y position and size, returns a function that expects the number of channels to 
 -- create and an x position and space between each channel
 pads' y size = \n x spacer -> 
-      let p = \chan -> pad ! #x (x + chan*spacer) ! #y y ! #size size ! #address "/seq/chan" # iargs [chan]
+      let p = \chan -> pad ! #x (x + chan*spacer) ! #y y ! #size size ! #address "/seq/chan" # iargs [chan + (quot (y-10) 29)*4]
       in mconcat $ foldr (\a b -> p a : b) [] [0..n-1] 
 
 interface = mpc

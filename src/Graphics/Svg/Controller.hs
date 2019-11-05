@@ -105,6 +105,12 @@ withEnd = (flip with . (:[]) . (->>WithEnd_) . pack) (show True)
 withCoords :: Element -> Element
 withCoords = (flip with . (:[]) . (->>WithCoords_) . pack) (show True)
 
+ion :: Int -> Element -> Element
+ion = flip with . (:[]) . (->>IOn_) . pack . show
+
+ioff :: Int -> Element -> Element
+ioff = flip with . (:[]) . (->>IOff_) . pack . show
+
 class IArgsAllType t where
     iargsAll' :: [Int] -> t
 
@@ -292,6 +298,9 @@ border =
 -- Interface helpers
 
 type Device = [Attribute]
+
+landscapeA4 :: Device
+landscapeA4 = [Version_ <<- "1.1", Device_ <<- "a4", Width_ <<- "297mm", Height_ <<- "210mm", ViewBox_ <<- "0 0 297 210"]
 
 sensel :: Device
 sensel = [Version_ <<- "1.1", Device_ <<- "sensel", Width_ <<- "240mm", Height_ <<- "140mm", ViewBox_ <<- "0 0 240 140"]
